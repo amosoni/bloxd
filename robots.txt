@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://bloxd.click/sitemap.xml
+Host: bloxd.click
 
 # Disallow admin areas (if any)
 Disallow: /admin/
