@@ -1,0 +1,31 @@
+{
+  "name": "bloxd-click",
+  "version": "1.0.0",
+  "description": "Play Bloxd online free! No download, no registration required. Join millions in this epic multiplayer block game.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/",
+    "build": "echo 'Static site - no build required'",
+    "dev": "live-server --port=3000 --open=/",
+    "lint": "echo 'Static HTML - no linting required'",
+    "test": "echo 'Static site - no tests required'"
+  },
+  "keywords": [
+    "bloxd",
+    "online-game",
+    "multiplayer",
+    "block-game",
+    "browser-game",
+    "free-game"
+  ],
+  "author": "Bloxd.click Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/bloxd-click.git"
+  },
+  "homepage": "https://bloxd.click"
+} 

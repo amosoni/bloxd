@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Help Shape Bloxd's Future | Bloxd.click</title>
+    <meta name="description" content="Share your feedback and suggestions for Bloxd! Help us improve the game with your ideas and opinions. Your voice matters!">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bloxd.click/feedback">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #0f0f23; color: white; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .hero { text-align: center; padding: 60px 0; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 20px; margin-bottom: 40px; }
+        .form-card { background: rgba(20, 20, 40, 0.8); padding: 30px; margin: 20px 0; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.2); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; background: rgba(255, 255, 255, 0.1); color: white; }
+        .form-group textarea { height: 120px; resize: vertical; }
+        .submit-button { background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; padding: 15px 30px; border: none; border-radius: 25px; font-size: 16px; cursor: pointer; }
+        .submit-button:hover { background: linear-gradient(135deg, #3d8bfd, #00d4e0); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Share Your Feedback</h1>
+            <p>Help us make Bloxd even better with your suggestions and ideas!</p>
+        </div>
+        
+        <div class="form-card">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="feedback-type">Feedback Type:</label>
+                    <select id="feedback-type" name="feedback-type" required>
+                        <option value="">Select feedback type...</option>
+                        <option value="feature">Feature Request (new game mechanics, tools, modes)</option>
+                        <option value="improvement">Game Improvement (existing features, quality of life)</option>
+                        <option value="balance">Game Balance (PvP, building, progression systems)</option>
+                        <option value="ui">User Interface (menus, HUD, accessibility)</option>
+                        <option value="community">Community Features (social, events, tournaments)</option>
+                        <option value="performance">Performance & Optimization (speed, stability, compatibility)</option>
+                        <option value="mobile">Mobile Experience (touch controls, mobile-specific features)</option>
+                        <option value="other">Other (please specify below)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedback-title">Feedback Title:</label>
+                    <input type="text" id="feedback-title" name="feedback-title" placeholder="Brief summary of your feedback" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedback-description">Detailed Feedback:</label>
+                    <textarea id="feedback-description" name="feedback-description" placeholder="Please describe your feedback in detail. What would you like to see improved or added to Bloxd?" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="priority">Priority Level:</label>
+                    <select id="priority" name="priority" required>
+                        <option value="">Select priority...</option>
+                        <option value="low">Low - Nice to have</option>
+                        <option value="medium">Medium - Would improve experience</option>
+                        <option value="high">High - Important for gameplay</option>
+                        <option value="critical">Critical - Game-breaking issue</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Username (optional):</label>
+                    <input type="text" id="username" name="username" placeholder="Your Bloxd username if you have one">
+                </div>
+                
+                <div style="text-align: center;">
+                    <button type="submit" class="submit-button">Submit Feedback</button>
+                </div>
+            </form>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="/" style="color: #4facfe;">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Bloxd Online Free - No Download Required | Bloxd.click</title>
+    <meta name="description" content="Play Bloxd online free! No download, no registration required. Join millions in this epic multiplayer block game. Start playing instantly in your browser!">
+    <meta name="keywords" content="bloxd online free, bloxd game, play bloxd, bloxd no download, free online games, multiplayer block games, browser games">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bloxd.click/">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Play Bloxd Online Free - No Download Required">
+    <meta property="og:description" content="Join millions playing Bloxd online free! Epic multiplayer block-building adventure starts now.">
+    <meta property="og:url" content="https://bloxd.click/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bloxd.click/bloxd-game-preview.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Bloxd",
+        "description": "Free online multiplayer block-building game - no download required",
+        "url": "https://bloxd.click/",
+        "genre": "Action, Multiplayer, Building",
+        "playMode": "MultiPlayer",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --dark-bg: #0f0f23;
+            --card-bg: rgba(20, 20, 40, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--dark-bg);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Animated Background */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: 
+                radial-gradient(ellipse at top, #1e3c72 0%, transparent 70%),
+                radial-gradient(ellipse at bottom, #2a5298 0%, transparent 70%),
+                linear-gradient(180deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);
+        }
+
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--accent-gradient);
+            border-radius: 50%;
+            opacity: 0.02;
+            animation: float 60s infinite linear;
+            filter: blur(3px);
+        }
+
+        .particle:nth-child(odd) {
+            background: var(--success-gradient);
+            opacity: 0.015;
+        }
+
+        .particle:nth-child(3n) {
+            background: var(--secondary-gradient);
+            opacity: 0.018;
+        }
+
+        .particle:nth-child(4n) {
+            background: rgba(255, 255, 255, 0.1);
+            opacity: 0.01;
+        }
+
+        .particle:nth-child(5n) {
+            background: rgba(79, 172, 254, 0.1);
+            opacity: 0.012;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.2);
+                opacity: 0;
+            }
+            15% {
+                opacity: 0.02;
+            }
+            85% {
+                opacity: 0.02;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(90deg) scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background: rgba(15, 15, 35, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 800;
+            font-size: 1.8rem;
+            gap: 0.8rem;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+        }
+
+        .logo-icon::before {
+            content: '⬛';
+            font-size: 1.5rem;
+            animation: logoSpin 4s ease-in-out infinite;
+        }
+
+        @keyframes logoSpin {
+            0%, 100% { transform: rotateY(0deg); }
+            50% { transform: rotateY(180deg); }
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .nav-item a:hover {
+            color: var(--text-primary);
+            transform: translateY(-2px);
+            background: rgba(79, 172, 254, 0.15);
+            border: 1px solid rgba(79, 172, 254, 0.4);
+            box-shadow: 0 4px 20px rgba(79, 172, 254, 0.2);
+        }
+
+        .nav-item a.active {
+            color: var(--text-primary);
+            background: rgba(79, 172, 254, 0.2);
+            border: 1px solid rgba(79, 172, 254, 0.5);
+            box-shadow: 0 4px 20px rgba(79, 172, 254, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 8rem 0 2rem;
+            position: relative;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--success-gradient);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+            box-shadow: 0 8px 32px rgba(67, 233, 123, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            box-shadow: 0 8px 32px rgba(79, 172, 254, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(79, 172, 254, 0.6);
+        }
+
+        .btn-secondary {
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Game Container */
+        .game-showcase {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1800px;
+        }
+
+        .game-container {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 0.8rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            z-index: 10;
+        }
+
+        /* Let the iframe aspect ratio stay pleasant on very wide screens */
+        .game-frame { aspect-ratio: 16 / 9; }
+
+        .game-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, 
+                rgba(102, 126, 234, 0.4) 0%, 
+                rgba(118, 75, 162, 0.3) 25%, 
+                rgba(79, 172, 254, 0.4) 50%, 
+                rgba(52, 199, 89, 0.3) 75%, 
+                rgba(102, 126, 234, 0.4) 100%);
+            border-radius: 26px;
+            z-index: -1;
+            animation: borderRotate 8s linear infinite;
+            filter: blur(1px);
+        }
+
+        @keyframes borderRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .game-frame {
+            width: 100%;
+            height: 70vh;
+            min-height: 560px;
+            border: none;
+            border-radius: 20px;
+            background: #000;
+            position: relative;
+            z-index: 1;
+        }
+
+        .game-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: 1rem;
+            padding: 1rem 1.5rem;
+            background: var(--glass-bg);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .game-stats {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4facfe;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.3rem;
+        }
+
+        .online-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+            position: absolute;
+            right: 1rem;
+        }
+
+        .pulse-dot {
+            width: 12px;
+            height: 12px;
+            background: #43e97b;
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 4vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(79, 172, 254, 0.5);
+            box-shadow: 0 20px 40px rgba(79, 172, 254, 0.2);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-gradient);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 6rem 0;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--glass-bg);
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-card .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Internal Links */
+        .internal-links {
+            padding: 8rem 0;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .link-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .link-card:hover::before {
+            left: 100%;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(79, 172, 254, 0.5);
+            box-shadow: 0 15px 30px rgba(79, 172, 254, 0.2);
+        }
+
+        .link-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #4facfe;
+        }
+
+        .link-description {
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            border-top: 1px solid var(--glass-border);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #4facfe;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .game-frame {
+                height: 60vh;
+                min-height: 480px;
+            }
+
+            .game-stats {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1rem; }
+            .nav-menu { display: none; position: absolute; right: 1rem; top: 64px; background: rgba(15,15,35,.98); border:1px solid var(--glass-border); border-radius:12px; padding: .5rem 0; width: 220px; }
+            .nav-menu .nav-item a{ display:block; padding:.8rem 1rem; }
+            .mobile-toggle{ display:block; margin-left: .5rem; background: transparent; color: #fff; border:1px solid var(--glass-border); padding:.4rem .7rem; border-radius:8px; }
+        }
+        @media (min-width: 769px){ .mobile-toggle{ display:none; } }
+
+        @media (max-width: 768px) {
+        .hero { padding: 6rem 0 2rem; }
+        .cta-buttons { justify-content: center; }
+        .game-frame { height: 55vh; min-height: 420px; }
+        .game-stats { flex-direction: column; gap: 1rem; text-align: center; }
+        .game-info { flex-direction: column; gap: 1.5rem; }
+        .features-grid, .links-grid { grid-template-columns: 1fr; }
+        .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .game-frame {
+                height: 40vh;
+                min-height: 300px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .game-container {
+                padding: 0.5rem;
+            }
+
+            .game-stats {
+                gap: 0.5rem;
+            }
+
+            .stat-number {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-gradient);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-gradient);
+        }
+    </style>
+    <style>
+        /* Comments */
+        .comments-section { padding: 3.5rem 0; }
+        .comments-wrapper { display: grid; grid-template-columns: 1fr; gap: 1.2rem; max-width: 900px; margin: 0 auto; }
+        @media (max-width: 992px){ .comments-wrapper{ grid-template-columns: 1fr; } }
+        .comment-card, .comment-form { background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.2rem; position: relative; overflow: hidden; }
+        .comment-card::before, .comment-form::before{ content:''; position:absolute; inset:-1px; border-radius:18px; background:linear-gradient(45deg, rgba(79,172,254,.12), rgba(0,242,254,.06)); filter:blur(16px); z-index:-1; }
+        .comments-title { font-size: 1.6rem; font-weight: 800; margin-bottom: .8rem; text-align: center; background: linear-gradient(135deg, #ffffff, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .comments-subtitle { text-align: center; margin: 0 0 .5rem 0; font-weight: 700; }
+        .comment-item { border-top: 1px solid var(--glass-border); padding-top: 1rem; margin-top: 1rem; }
+        .comment-meta { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; }
+        .comment-images { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+        .comment-images img { width: 110px; height: 110px; object-fit: cover; border-radius: 8px; border: 1px solid var(--glass-border); }
+        .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .8rem; margin-bottom: .8rem; }
+        .form-control, textarea.form-control { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid var(--glass-border); color: var(--text-primary); padding: 0.7rem .9rem; border-radius: 10px; outline: none; font-size:.95rem; }
+        .form-control:focus, textarea.form-control:focus { border-color: rgba(79,172,254,.6); box-shadow: 0 0 0 2px rgba(79,172,254,.15); }
+        textarea.form-control { min-height: 120px; resize: vertical; }
+        .form-note { color: var(--text-secondary); font-size: 0.8rem; }
+        .btn-submit { display: inline-block; background: var(--accent-gradient); color: #fff; padding: 0.7rem 1.2rem; border-radius: 999px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; box-shadow: 0 8px 24px rgba(79,172,254,.22); font-size:.95rem; }
+        .btn-submit:hover{ transform: translateY(-1px); }
+        .btn-choose { display:inline-block; background:transparent; border:1px solid var(--glass-border); color:#fff; padding:.6rem 1rem; border-radius:999px; cursor:pointer; font-size:.95rem; }
+        .btn-choose:hover{ background: rgba(255,255,255,.06); }
+        .preview-images { display:flex; gap: .5rem; margin-top:.5rem; flex-wrap: wrap; }
+        .preview-images img { width: 90px; height: 90px; object-fit: cover; border-radius:8px; border:1px solid var(--glass-border); }
+    </style>
+</head>
+<body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg"></div>
+    <div class="floating-particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Bloxd.click</span>
+                </a>
+                <ul class="nav-menu" id="primaryNav">
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/bloxd-building-guide.html">Building</a></li>
+                    <li class="nav-item"><a href="/bloxd-pvp-guide.html">PvP</a></li>
+                    <li class="nav-item"><a href="/bloxd-servers.html">Servers</a></li>
+                </ul>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Play Bloxd Online Free</h1>
+                    <p class="hero-subtitle">
+                        Experience the ultimate multiplayer block-building adventure. 
+                        Create, explore, and battle with millions of players worldwide - 
+                        all instantly in your browser!
+                    </p>
+                </div>
+                
+                <div class="game-showcase" id="game">
+                    <div class="game-container">
+                        <iframe src='https://bloxd.io/' class="game-frame" allowfullscreen title="Play Bloxd Game"></iframe>
+                        <div class="game-info">
+                            <div class="game-stats">
+                                <div class="stat">
+                                    <div class="stat-number" data-count="2.5">0</div>
+                                    <div class="stat-label">Million Players</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number" data-count="500">0</div>
+                                    <div class="stat-label">Servers Online</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number" data-count="100">0</div>
+                                    <div class="stat-label">% Free</div>
+                                </div>
+                            </div>
+                            <div class="online-indicator">
+                                <div class="pulse-dot"></div>
+                                <span style="color: #43e97b; font-weight: 600;">LIVE</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Game Navigation Help -->
+                        <div class="game-navigation-help">
+                            <p style="text-align: center; color: #4facfe; margin-top: 1rem; font-size: 0.9rem;">
+                                💡 <strong>Tip:</strong> Use browser back button or close this tab to return to Bloxd.click
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </section>
+
+    <!-- Comments -->
+    <section class="comments-section" id="comments">
+        <div class="container">
+            <h2 class="comments-title">Leave a Comment</h2>
+            <div class="comments-wrapper">
+                <div class="comment-form">
+                    <form id="commentForm">
+                        <div class="form-row">
+                            <input type="text" id="cName" class="form-control" placeholder="Name" required />
+                            <input type="email" id="cEmail" class="form-control" placeholder="Email" required />
+                        </div>
+                        <textarea id="cContent" class="form-control" placeholder="Content" required></textarea>
+                        <div class="form-row">
+                            <input type="file" id="cImages" accept="image/*" multiple style="display:none" />
+                            <button type="button" class="btn-choose" id="btnSelectImages">Choose Images</button>
+                            <span class="form-note" id="fileInfo">No files selected</span>
+                        </div>
+                        <div class="preview-images" id="previewImages"></div>
+                        <p class="form-note">Tip: You can upload up to 6 images. Offensive content will be removed.</p>
+                        <button type="submit" class="btn-submit">Comment</button>
+                    </form>
+                </div>
+
+                <div class="comment-card">
+                    <h3 class="comments-subtitle">Latest Comments</h3>
+                    <div id="commentsList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+     <!-- Popular Questions -->
+    <section class="internal-links" id="popular-questions">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Questions</h2>
+                <p class="section-subtitle">Quick answers to common Bloxd questions.</p>
+            </div>
+            <div class="links-grid">
+                <a href="/break-bedrock-bloxd-2024.html" class="link-card">
+                    <h3 class="link-title">🧨 Break Bedrock (2024)</h3>
+                    <p class="link-description">Server-safe methods to remove or bypass bedrock.</p>
+                </a>
+                <a href="/go-to-nether-bloxd.html" class="link-card">
+                    <h3 class="link-title">🔥 Go to the Nether</h3>
+                    <p class="link-description">Portal recipe and safe travel checklist.</p>
+                </a>
+                <a href="/gold-vs-iron-bloxd.html" class="link-card">
+                    <h3 class="link-title">🥇 Gold vs Iron</h3>
+                    <p class="link-description">Which to craft for tools and armor.</p>
+                </a>
+                <a href="/exit-fullscreen-bloxd-chromebook.html" class="link-card">
+                    <h3 class="link-title">🔲 Exit Full Screen</h3>
+                    <p class="link-description">Chromebook shortcuts and browser toggle.</p>
+                </a>
+                <a href="/get-cotton-bloxd.html" class="link-card">
+                    <h3 class="link-title">🌿 Get Cotton</h3>
+                    <p class="link-description">Locations, markets, and farm loop.</p>
+                </a>
+                <a href="/reenable-mods-bloxd-io.html" class="link-card">
+                    <h3 class="link-title">🧩 Re‑enable Mods</h3>
+                    <p class="link-description">Safe methods and server rules.</p>
+                </a>
+                <a href="/make-dog-sit-bloxd-io.html" class="link-card">
+                    <h3 class="link-title">🐶 Make Dog Sit</h3>
+                    <p class="link-description">Pet commands and common fixes.</p>
+                </a>
+                <a href="/mine-bedrock-bloxd-io.html" class="link-card">
+                    <h3 class="link-title">⛏️ Mine Bedrock</h3>
+                    <p class="link-description">What’s actually possible on servers.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number" data-count="5">0</span>
+                    <div class="stat-label">Million+ Downloads</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-count="24">0</span>
+                    <div class="stat-label">Hours Daily Uptime</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-count="150">0</span>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-count="99">0</span>
+                    <div class="stat-label">% Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Bloxd?</h2>
+                <p class="section-subtitle">
+                    Experience the next generation of online block gaming with 
+                    cutting-edge features and unlimited possibilities.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Instant Play</h3>
+                    <p class="feature-description">
+                        Jump into the action immediately. No downloads, no installations, 
+                        no waiting. Your adventure starts with just one click.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">Global Multiplayer</h3>
+                    <p class="feature-description">
+                        Connect with players from around the world. Build together, 
+                        compete in epic battles, and make lasting friendships.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏗️</div>
+                    <h3 class="feature-title">Unlimited Building</h3>
+                    <p class="feature-description">
+                        Create magnificent structures with unlimited blocks and materials. 
+                        Your imagination is the only limit to what you can build.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Epic PvP Combat</h3>
+                    <p class="feature-description">
+                        Master various weapons and tactics in thrilling player vs player 
+                        battles. Climb the leaderboards and prove your skills.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Cross-Platform</h3>
+                    <p class="feature-description">
+                        Play seamlessly across all devices - PC, mobile, tablet. 
+                        Your progress syncs automatically wherever you play.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🆓</div>
+                    <h3 class="feature-title">Always Free</h3>
+                    <p class="feature-description">
+                        Enjoy the complete Bloxd experience at zero cost. No hidden fees, 
+                        no premium barriers, just pure gaming fun forever.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internal Links Section -->
+    <section class="internal-links" id="guides">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Master Your Game</h2>
+                <p class="section-subtitle">
+                    Explore our comprehensive guides and resources to become a Bloxd legend.
+                </p>
+            </div>
+            
+            <div class="links-grid">
+                <a href="/how-to-play-bloxd.html" class="link-card">
+                    <h3 class="link-title">🎮 Beginner's Guide</h3>
+                    <p class="link-description">
+                        Complete tutorial for new players. Learn controls, gameplay mechanics, 
+                        and essential strategies to get started.
+                    </p>
+                </a>
+                
+                <a href="/bloxd-building-guide.html" class="link-card">
+                    <h3 class="link-title">🏗️ Building Mastery</h3>
+                    <p class="link-description">
+                        Advanced building techniques, architectural principles, and 
+                        creative inspiration for stunning constructions.
+                    </p>
+                </a>
+                
+                <a href="/bloxd-pvp-guide.html" class="link-card">
+                    <h3 class="link-title">⚔️ Combat Training</h3>
+                    <p class="link-description">
+                        Master PvP combat with weapon guides, tactical strategies, 
+                        and pro tips from top players.
+                    </p>
+                </a>
+                
+                <a href="/bloxd-servers.html" class="link-card">
+                    <h3 class="link-title">🌐 Best Servers</h3>
+                    <p class="link-description">
+                        Discover the most popular servers, game modes, and 
+                        communities to join your next adventure.
+                    </p>
+                </a>
+                
+                <a href="/bloxd-strategies.html" class="link-card">
+                    <h3 class="link-title">🎯 Advanced Strategies</h3>
+                    <p class="link-description">
+                        Master advanced building techniques, PvP combat strategies, 
+                        and survival tactics from expert players.
+                    </p>
+                </a>
+                
+                <a href="/bloxd-updates.html" class="link-card">
+                    <h3 class="link-title">📰 Latest News</h3>
+                    <p class="link-description">
+                        Stay updated with new features, events, patches, and 
+                        community highlights from the Bloxd universe.
+                    </p>
+                </a>
+                
+                <a href="/break-bedrock-bloxd-2024.html" class="link-card">
+                    <h3 class="link-title">🧨 Break Bedrock (2024)</h3>
+                    <p class="link-description">Server-safe methods to remove/bypass bedrock with step-by-step checks.</p>
+                </a>
+                
+                <a href="/go-to-nether-bloxd.html" class="link-card">
+                    <h3 class="link-title">🔥 Go to the Nether</h3>
+                    <p class="link-description">Portal recipe, travel checklist, and what to do if Nether is disabled.</p>
+                </a>
+                
+                <a href="/gold-vs-iron-bloxd.html" class="link-card">
+                    <h3 class="link-title">🥇 Gold vs Iron</h3>
+                    <p class="link-description">Clear stats for tools, armor, and economy so you craft the right gear.</p>
+                </a>
+                
+                <a href="/exit-fullscreen-bloxd-chromebook.html" class="link-card">
+                    <h3 class="link-title">🔲 Exit Full Screen (Chromebook)</h3>
+                    <p class="link-description">One‑tap shortcuts and browser toggles to get out of full screen fast.</p>
+                </a>
+                
+                <a href="/get-cotton-bloxd.html" class="link-card">
+                    <h3 class="link-title">🌿 Get Cotton</h3>
+                    <p class="link-description">Best locations, market tips, and a quick farming loop for steady supply.</p>
+                </a>
+                
+                <a href="/reenable-mods-bloxd-io.html" class="link-card">
+                    <h3 class="link-title">🧩 Re‑enable Mods (Safe)</h3>
+                    <p class="link-description">Understand rules and use cosmetic/performance tweaks without risk.</p>
+                </a>
+                
+                <a href="/make-dog-sit-bloxd-io.html" class="link-card">
+                    <h3 class="link-title">🐶 Make Dog Sit</h3>
+                    <p class="link-description">Simple controls and fixes when your pet won’t obey on some servers.</p>
+                </a>
+                
+                <a href="/mine-bedrock-bloxd-io.html" class="link-card">
+                    <h3 class="link-title">⛏️ Mine Bedrock</h3>
+                    <p class="link-description">What’s truly possible on most servers and safe alternatives.</p>
+                </a>
+                
+                <a href="/get-under-bedrock-bloxd-io.html" class="link-card">
+                    <h3 class="link-title">⬇️ Under Bedrock</h3>
+                    <p class="link-description">Allowed routes, safety checklist, and return tips if permitted.</p>
+                </a>
+                
+                <a href="/get-iron-watermelon-bloxd-io.html" class="link-card">
+                    <h3 class="link-title">🍉 Iron Watermelon</h3>
+                    <p class="link-description">Skins, seasonal items, and where players actually get them.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comments -->
+    <section class="comments-section" id="comments">
+        <div class="container">
+            <h2 class="comments-title">Leave a Comment</h2>
+            <div class="comments-wrapper">
+                <div class="comment-form">
+                    <form id="commentForm">
+                        <div class="form-row">
+                            <input type="text" id="cName" class="form-control" placeholder="Name" required />
+                            <input type="email" id="cEmail" class="form-control" placeholder="Email" required />
+                        </div>
+                        <textarea id="cContent" class="form-control" placeholder="Content" required></textarea>
+                        <div class="form-row">
+                            <input type="file" id="cImages" accept="image/*" multiple style="display:none" />
+                            <button type="button" class="btn-choose" id="btnSelectImages">Choose Images</button>
+                            <span class="form-note" id="fileInfo">No files selected</span>
+                        </div>
+                        <div class="preview-images" id="previewImages"></div>
+                        <p class="form-note">Tip: You can upload up to 6 images. Offensive content will be removed.</p>
+                        <button type="submit" class="btn-submit">Comment</button>
+                    </form>
+                </div>
+
+                <div class="comment-card">
+                    <h3 style="margin:0 0 .5rem 0">Latest Comments</h3>
+                    <div id="commentsList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Game</h3>
+                    <div class="footer-links">
+                        <a href="/how-to-play-bloxd.html">How to Play</a>
+                        <a href="/bloxd-servers.html">Servers</a>
+                        <a href="/bloxd-mods.html">Mods & Skins</a>
+                        <a href="/system-requirements.html">Requirements</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Guides</h3>
+                    <div class="footer-links">
+                        <a href="/bloxd-building-guide.html">Building Guide</a>
+                        <a href="/bloxd-pvp-guide.html">PvP Guide</a>
+                        <a href="/bloxd-strategies.html">Advanced Strategies</a>
+
+                    </div>
+                </div>
+                
+                <div class="footer-section" id="community">
+                    <h3>Community</h3>
+                    <div class="footer-links">
+                        <a href="/discord.html">Discord</a>
+                        <a href="/reddit.html">Reddit</a>
+                        <a href="/tournaments.html">Tournaments</a>
+                        <a href="/leaderboards.html">Leaderboards</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section" id="support">
+                    <h3>Support</h3>
+                    <div class="footer-links">
+                        <a href="/index.html">Support</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bloxd.click - The Ultimate Free Online Block Game Experience</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Particle System
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.width = Math.random() * 4 + 2 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Animated Counters
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number[data-count]');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseFloat(counter.getAttribute('data-count'));
+                        const suffix = target < 10 ? 'M+' : target > 90 ? '%' : '+';
+                        
+                        let current = 0;
+                        const increment = target / 100;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            counter.textContent = (target < 10 ? current.toFixed(1) : Math.floor(current)) + (target < 10 ? 'M' : target > 90 ? '%' : '');
+                        }, 20);
+                        observer.unobserve(counter);
+                    }
+                });
+            });
+            
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navigation Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(15, 15, 35, 0.95)';
+                nav.style.borderBottom = '1px solid rgba(79, 172, 254, 0.3)';
+            } else {
+                nav.style.background = 'rgba(15, 15, 35, 0.9)';
+                nav.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
+            }
+        });
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.cosmic-bg');
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            animateCounters();
+            updateNavigation();
+        });
+
+        // Update navigation active state
+        function updateNavigation() {
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            const sections = document.querySelectorAll('section[id]');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Game Load Optimization
+        const gameFrame = document.querySelector('.game-frame');
+        gameFrame.addEventListener('load', () => {
+            console.log('Bloxd game loaded successfully');
+        });
+
+        // Add mobile menu toggle
+        const navMenu = document.getElementById('primaryNav');
+        const toggleBtn = document.getElementById('mobileToggle');
+        const updateMenuForViewport = () => {
+            if (window.innerWidth > 768) {
+                navMenu.style.display = 'flex';
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            } else {
+                navMenu.style.display = 'none';
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+        };
+        toggleBtn?.addEventListener('click', () => {
+            const isOpen = navMenu.style.display === 'block';
+            navMenu.style.display = isOpen ? 'none' : 'block';
+            toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+        window.addEventListener('resize', updateMenuForViewport);
+        updateMenuForViewport();
+
+        // Comments logic (localStorage mock)
+        const commentForm = document.getElementById('commentForm');
+        const commentsList = document.getElementById('commentsList');
+        const imgInput = document.getElementById('cImages');
+        const btnSelectImages = document.getElementById('btnSelectImages');
+        const fileInfo = document.getElementById('fileInfo');
+        const preview = document.getElementById('previewImages');
+        const STORAGE_KEY = 'bloxd_comments_v1';
+
+        function loadComments() {
+            const items = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+            commentsList.innerHTML = items.map(renderComment).join('') || '<p class="form-note">No comments yet. Be the first to share!</p>';
+        }
+        function renderComment(c){
+            const imgs = (c.images||[]).map(src=>`<img src="${src}" alt="comment image"/>`).join('');
+            return `<div class="comment-item"><div class="comment-meta">${c.name} • ${new Date(c.time).toLocaleString()}</div><div>${escapeHtml(c.content)}</div><div class="comment-images">${imgs}</div></div>`;
+        }
+        function escapeHtml(s){return s.replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[m]));}
+
+        btnSelectImages?.addEventListener('click', ()=> imgInput?.click());
+        imgInput?.addEventListener('change', ()=>{
+            preview.innerHTML='';
+            const files = Array.from(imgInput.files||[]).slice(0,6);
+            fileInfo.textContent = files.length ? `${files.length} file(s) selected` : 'No files selected';
+            files.forEach(f=>{ const url = URL.createObjectURL(f); const img=document.createElement('img'); img.src=url; preview.appendChild(img); });
+        });
+
+        commentForm?.addEventListener('submit', async (e)=>{
+            e.preventDefault();
+            const name = document.getElementById('cName').value.trim();
+            const email = document.getElementById('cEmail').value.trim();
+            const content = document.getElementById('cContent').value.trim();
+            if(!name || !email || !content) return alert('Please complete all fields.');
+
+            // Convert selected images to data URLs for demo persistence
+            const files = Array.from(imgInput.files||[]).slice(0,6);
+            const images = await Promise.all(files.map(f=>fileToDataURL(f)));
+
+            const item = { name, email, content, images, time: Date.now() };
+            const items = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+            items.unshift(item);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(items.slice(0,100)));
+            commentForm.reset(); preview.innerHTML='';
+            loadComments();
+        });
+
+        function fileToDataURL(file){
+            return new Promise(res=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.readAsDataURL(file); });
+        }
+
+        loadComments();
+    </script>
+</body>
+</html>

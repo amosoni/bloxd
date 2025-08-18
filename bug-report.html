@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Bug - Help Improve Bloxd | Bloxd.click</title>
+    <meta name="description" content="Found a bug in Bloxd? Report it here to help us improve the game. Your feedback is valuable for making Bloxd better for everyone.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bloxd.click/bug-report">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #0f0f23; color: white; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .hero { text-align: center; padding: 60px 0; background: linear-gradient(135deg, #FF6B6B, #FF8E8E); border-radius: 20px; margin-bottom: 40px; }
+        .form-card { background: rgba(20, 20, 40, 0.8); padding: 30px; margin: 20px 0; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.2); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; background: rgba(255, 255, 255, 0.1); color: white; }
+        .form-group textarea { height: 120px; resize: vertical; }
+        .submit-button { background: linear-gradient(135deg, #FF6B6B, #FF8E8E); color: white; padding: 15px 30px; border: none; border-radius: 25px; font-size: 16px; cursor: pointer; }
+        .submit-button:hover { background: linear-gradient(135deg, #FF5252, #FF7676); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Report a Bug</h1>
+            <p>Help us improve Bloxd by reporting any issues you encounter!</p>
+        </div>
+        
+        <div class="form-card">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="bug-type">Bug Type:</label>
+                    <select id="bug-type" name="bug-type" required>
+                        <option value="">Select bug type...</option>
+                        <option value="gameplay">Gameplay Issue (movement, controls, mechanics)</option>
+                        <option value="building">Building Problem (block placement, tools, materials)</option>
+                        <option value="pvp">PvP Combat Issue (weapons, hit detection, balance)</option>
+                        <option value="performance">Performance Problem (lag, crashes, slow loading)</option>
+                        <option value="ui">User Interface Issue (menus, HUD, buttons)</option>
+                        <option value="multiplayer">Multiplayer Issue (connection, server problems)</option>
+                        <option value="mobile">Mobile/Tablet Issue (touch controls, display)</option>
+                        <option value="other">Other (please specify below)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bug-title">Bug Title:</label>
+                    <input type="text" id="bug-title" name="bug-title" placeholder="Brief description of the bug" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bug-description">Detailed Description:</label>
+                    <textarea id="bug-description" name="bug-description" placeholder="Please describe the bug in detail, including steps to reproduce it..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="browser">Browser:</label>
+                    <input type="text" id="browser" name="browser" placeholder="e.g., Chrome 120, Firefox 115" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="device">Device:</label>
+                    <input type="text" id="device" name="device" placeholder="e.g., Windows 11, MacBook Pro, iPhone 15" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Username (optional):</label>
+                    <input type="text" id="username" name="username" placeholder="Your Bloxd username if you have one">
+                </div>
+                
+                <div style="text-align: center;">
+                    <button type="submit" class="submit-button">Submit Bug Report</button>
+                </div>
+            </form>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="/" style="color: #4facfe;">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloxd Building Guide - Master Advanced Construction Techniques | Bloxd.click</title>
+    <meta name="description" content="Master Bloxd building with our comprehensive guide. Learn advanced techniques, architectural principles, and creative building strategies to create stunning structures!">
+    <meta name="keywords" content="bloxd building guide, bloxd construction, bloxd architecture, bloxd building tips, bloxd creative building, bloxd building techniques">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bloxd.click/bloxd-building-guide">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bloxd Building Guide - Master Advanced Construction Techniques">
+    <meta property="og:description" content="Learn advanced building techniques and architectural principles to create magnificent structures in Bloxd!">
+    <meta property="og:url" content="https://bloxd.click/bloxd-building-guide">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://bloxd.click/assets/images/bloxd-building-guide.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Bloxd Building Guide",
+        "description": "Advanced building techniques and architectural principles for Bloxd",
+        "url": "https://bloxd.click/bloxd-building-guide",
+        "image": "https://bloxd.click/assets/images/bloxd-building-guide.jpg",
+        "totalTime": "PT45M",
+        "estimatedCost": "0",
+        "supply": [
+            {
+                "@type": "HowToSupply",
+                "name": "Bloxd Game Access"
+            },
+            {
+                "@type": "HowToSupply",
+                "name": "Creative Mode or Resources"
+            }
+        ],
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Plan Your Build",
+                "text": "Sketch your design and plan the layout"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Choose Materials",
+                "text": "Select appropriate blocks for your structure"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Build Foundation",
+                "text": "Create a solid base for your structure"
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --dark-bg: #0f0f23;
+            --card-bg: rgba(20, 20, 40, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--dark-bg);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 0;
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 800;
+            font-size: 1.5rem;
+            gap: 0.8rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon::before {
+            content: '⬛';
+            font-size: 1.2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item a:hover {
+            color: var(--text-primary);
+            background: rgba(79, 172, 254, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .guide-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(79, 172, 254, 0.5);
+            box-shadow: 0 15px 30px rgba(79, 172, 254, 0.2);
+        }
+
+        .guide-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .guide-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .guide-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Building Techniques */
+        .technique-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .technique-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .technique-item {
+            background: var(--glass-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .technique-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #4facfe;
+            margin-bottom: 1rem;
+        }
+
+        .technique-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .technique-steps {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .technique-steps li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .technique-steps li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #4facfe;
+            font-size: 0.8rem;
+        }
+
+        /* Material Guide */
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .material-card {
+            background: var(--glass-bg);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+        }
+
+        .material-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .material-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .material-uses {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tips Section */
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tips-list li {
+            background: var(--glass-bg);
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #43e97b;
+        }
+
+        .tips-list li::before {
+            content: '💡';
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            border-top: 1px solid var(--glass-border);
+            padding: 3rem 0 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #4facfe;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .technique-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .materials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .technique-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Bloxd.click</span>
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/bloxd-building-guide.html">Building</a></li>
+                    <li class="nav-item"><a href="/bloxd-pvp-guide.html">PvP</a></li>
+                    <li class="nav-item"><a href="/bloxd-servers.html">Servers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Bloxd Building Guide</h1>
+            <p class="hero-subtitle">
+                Master the art of construction in Bloxd! Learn advanced building techniques, 
+                architectural principles, and creative strategies to create stunning structures.
+            </p>
+            <a href="/#game" class="cta-button">Start Building Now!</a>
+            <p style="text-align: center; color: #4facfe; margin-top: 1rem; font-size: 0.9rem;">
+                💡 <strong>Tip:</strong> The game is embedded on the homepage. You will be redirected there now.
+            </p>
+        </div>
+    </section>
+
+    <!-- Building Fundamentals -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Building Fundamentals</h2>
+            <div class="guide-grid">
+                        <div class="guide-card">
+            <div class="guide-icon">📐</div>
+            <h3 class="guide-title">Planning & Design</h3>
+            <p class="guide-description">
+                Start with a clear vision. Sketch your design, plan the layout, and consider 
+                the scale before placing your first block. Use graph paper or digital tools to plan your build. Consider the environment - will your structure fit naturally in the landscape? Plan for both aesthetics and functionality.
+            </p>
+        </div>
+                
+                        <div class="guide-card">
+            <div class="guide-icon">🏗️</div>
+            <h3 class="guide-title">Foundation First</h3>
+            <p class="guide-description">
+                Always build from the ground up. A solid foundation ensures your structure 
+                is stable and well-proportioned. Use strong materials like stone or obsidian for the base. Consider the terrain - you might need to level the ground or build supports on slopes. A good foundation should be at least 2-3 blocks deep for large structures.
+            </p>
+        </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">🎨</div>
+                    <h3 class="guide-title">Material Selection</h3>
+                    <p class="guide-description">
+                        Choose blocks that complement your design. Consider texture, color, and 
+                        how materials work together visually.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Techniques -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Advanced Building Techniques</h2>
+            <div class="technique-section">
+                <div class="technique-grid">
+                    <div class="technique-item">
+                        <div class="technique-name">Layering & Depth</div>
+                        <p class="technique-description">
+                            Create visual interest by building in layers and adding depth to your structures.
+                        </p>
+                        <ol class="technique-steps">
+                            <li>Start with the main structure</li>
+                            <li>Add secondary layers for detail</li>
+                            <li>Include depth with recessed areas</li>
+                            <li>Use different block heights for variety</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="technique-item">
+                        <div class="technique-name">Symmetry & Balance</div>
+                        <p class="technique-description">
+                            Achieve visual harmony through balanced proportions and symmetrical design.
+                        </p>
+                        <ol class="technique-steps">
+                            <li>Find the center point of your build</li>
+                            <li>Mirror elements on both sides</li>
+                            <li>Maintain consistent spacing</li>
+                            <li>Balance large and small elements</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="technique-item">
+                        <div class="technique-name">Texturing & Detailing</div>
+                        <p class="technique-description">
+                            Add character and realism through careful texturing and attention to detail.
+                        </p>
+                        <ol class="technique-steps">
+                            <li>Vary block types for texture</li>
+                            <li>Add small decorative elements</li>
+                            <li>Include realistic details</li>
+                            <li>Use stairs and slabs for variety</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="technique-item">
+                        <div class="technique-name">Proportion & Scale</div>
+                        <p class="technique-description">
+                            Ensure your builds look realistic by maintaining proper proportions.
+                        </p>
+                        <ol class="technique-steps">
+                            <li>Plan the overall dimensions</li>
+                            <li>Maintain human-scale proportions</li>
+                            <li>Consider interior spaces</li>
+                            <li>Balance height, width, and depth</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Materials -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Essential Building Materials</h2>
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="material-icon">🧱</div>
+                    <div class="material-name">Stone Blocks</div>
+                    <div class="material-uses">Foundations, walls, paths</div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-icon">🪵</div>
+                    <div class="material-name">Wood Planks</div>
+                    <div class="material-uses">Floors, ceilings, furniture</div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-icon">🔲</div>
+                    <div class="material-name">Glass</div>
+                    <div class="material-uses">Windows, skylights, decoration</div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-icon">🧱</div>
+                    <div class="material-name">Bricks</div>
+                    <div class="material-uses">Chimneys, fireplaces, accents</div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-icon">⚫</div>
+                    <div class="material-name">Obsidian</div>
+                    <div class="material-uses">Strong structures, portals</div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-icon">💎</div>
+                    <div class="material-name">Diamond Blocks</div>
+                    <div class="material-uses">Luxury accents, special features</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Styles -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Popular Building Styles</h2>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon">🏰</div>
+                    <h3 class="guide-title">Medieval & Fantasy</h3>
+                    <p class="guide-description">
+                        Create majestic castles, towers, and fantasy structures with stone, wood, 
+                        and decorative elements.
+                    </p>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">🏠</div>
+                    <h3 class="guide-title">Modern & Contemporary</h3>
+                    <p class="guide-description">
+                        Build sleek, minimalist structures with clean lines, large windows, 
+                        and open floor plans.
+                    </p>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">🌿</div>
+                    <h3 class="guide-title">Nature-Inspired</h3>
+                    <p class="guide-description">
+                        Design organic structures that blend with the environment using natural 
+                        materials and flowing forms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pro Tips -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Pro Building Tips</h2>
+            <ul class="tips-list">
+                <li><strong>Use Reference Images:</strong> Study real architecture and art for inspiration</li>
+                <li><strong>Start Small:</strong> Master basic techniques before attempting complex builds</li>
+                <li><strong>Experiment with Shapes:</strong> Don't limit yourself to just squares and rectangles</li>
+                <li><strong>Add Interior Details:</strong> Furnish your builds to make them feel lived-in</li>
+                <li><strong>Use Lighting:</strong> Strategic lighting can transform the mood of your build</li>
+                <li><strong>Consider the Environment:</strong> Make your builds fit the surrounding landscape</li>
+                <li><strong>Practice Regularly:</strong> Building skills improve with consistent practice</li>
+                <li><strong>Join Building Communities:</strong> Learn from other talented builders</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Continue Your Journey</h2>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon">⚔️</div>
+                    <h3 class="guide-title">Master PvP Combat</h3>
+                    <p class="guide-description">
+                        Ready to test your skills in battle? Learn advanced combat techniques 
+                        and tactical strategies.
+                    </p>
+                    <a href="/bloxd-pvp-guide.html" style="color: #4facfe; text-decoration: none; font-weight: 600;">Learn Combat →</a>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">🌐</div>
+                    <h3 class="guide-title">Find Building Servers</h3>
+                    <p class="guide-description">
+                        Discover the best servers for building and showcase your creations 
+                        to the community.
+                    </p>
+                    <a href="/bloxd-servers.html" style="color: #4facfe; text-decoration: none; font-weight: 600;">Find Servers →</a>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">💡</div>
+                    <h3 class="guide-title">Advanced Tips & Tricks</h3>
+                    <p class="guide-description">
+                        Unlock secret building techniques and expert strategies to take 
+                        your builds to the next level.
+                    </p>
+                    <a href="/bloxd-strategies.html" style="color: #4facfe; text-decoration: none; font-weight: 600;">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/how-to-play-bloxd.html">How to Play</a>
+                <a href="/bloxd-building-guide.html">Building Guide</a>
+                <a href="/bloxd-pvp-guide.html">PvP Guide</a>
+                <a href="/bloxd-servers.html">Servers</a>
+                <a href="/faq.html">FAQ</a>
+                                        <a href="/feedback.html">Feedback</a>
+            </div>
+            <p>&copy; 2025 Bloxd.click - Build, Create, Inspire!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(15, 15, 35, 0.98)';
+            } else {
+                nav.style.background = 'rgba(15, 15, 35, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html> 

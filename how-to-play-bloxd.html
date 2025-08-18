@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play Bloxd - Complete Beginner's Guide | Bloxd.click</title>
+    <meta name="description" content="Learn how to play Bloxd with our complete beginner's guide. Master controls, gameplay mechanics, and essential strategies to start your block-building adventure!">
+    <meta name="keywords" content="how to play bloxd, bloxd tutorial, bloxd beginner guide, bloxd controls, bloxd gameplay, bloxd tips">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bloxd.click/how-to-play-bloxd">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="How to Play Bloxd - Complete Beginner's Guide">
+    <meta property="og:description" content="Master Bloxd with our comprehensive tutorial. Learn controls, gameplay, and strategies to become a pro!">
+    <meta property="og:url" content="https://bloxd.click/how-to-play-bloxd">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://bloxd.click/assets/images/bloxd-tutorial.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Play Bloxd",
+        "description": "Complete beginner's guide to playing Bloxd online",
+        "url": "https://bloxd.click/how-to-play-bloxd",
+        "image": "https://bloxd.click/assets/images/bloxd-tutorial.jpg",
+        "totalTime": "PT30M",
+        "estimatedCost": "0",
+        "supply": [
+            {
+                "@type": "HowToSupply",
+                "name": "Computer or Mobile Device"
+            },
+            {
+                "@type": "HowToSupply",
+                "name": "Internet Connection"
+            }
+        ],
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Access the Game",
+                "text": "Visit bloxd.io in your web browser",
+                "url": "https://bloxd.io"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Learn Basic Controls",
+                "text": "Master WASD movement and mouse controls"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Start Building",
+                "text": "Place blocks and create your first structure"
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --dark-bg: #0f0f23;
+            --card-bg: rgba(20, 20, 40, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--dark-bg);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 0;
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 800;
+            font-size: 1.5rem;
+            gap: 0.8rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon::before {
+            content: '⬛';
+            font-size: 1.2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item a:hover {
+            color: var(--text-primary);
+            background: rgba(79, 172, 254, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .guide-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(79, 172, 254, 0.5);
+            box-shadow: 0 15px 30px rgba(79, 172, 254, 0.2);
+        }
+
+        .guide-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .guide-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .guide-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Control Section */
+        .controls-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+        }
+
+        .control-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .control-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--glass-bg);
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .control-key {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .control-action {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Tips Section */
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tips-list li {
+            background: var(--glass-bg);
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #4facfe;
+        }
+
+        .tips-list li::before {
+            content: '💡';
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            border-top: 1px solid var(--glass-border);
+            padding: 3rem 0 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #4facfe;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .control-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .controls-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Bloxd.click</span>
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/bloxd-building-guide.html">Building</a></li>
+                    <li class="nav-item"><a href="/bloxd-pvp-guide.html">PvP</a></li>
+                    <li class="nav-item"><a href="/bloxd-servers.html">Servers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>How to Play Bloxd</h1>
+            <p class="hero-subtitle">
+                Master the ultimate multiplayer block-building game with our comprehensive beginner's guide. 
+                Learn everything you need to know to start your adventure!
+            </p>
+            <a href="/#game" class="cta-button">Play Now - Free!</a>
+            <p style="text-align: center; color: #4facfe; margin-top: 1rem; font-size: 0.9rem;">
+                💡 <strong>Tip:</strong> The game is embedded on the homepage. You will be redirected there now.
+            </p>
+        </div>
+    </section>
+
+    <!-- Getting Started -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Getting Started</h2>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon">🌐</div>
+                    <h3 class="guide-title">Access the Game</h3>
+                    <p class="guide-description">
+                        Simply visit bloxd.io in your web browser. No downloads or installations required - 
+                        start playing instantly!
+                    </p>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">👤</div>
+                    <h3 class="guide-title">Choose Your Server</h3>
+                    <p class="guide-description">
+                        Select from hundreds of servers with different game modes, from survival to creative building.
+                    </p>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">🎮</div>
+                    <h3 class="guide-title">Start Playing</h3>
+                    <p class="guide-description">
+                        Jump into the action! Build, explore, and interact with other players from around the world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Basic Controls -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Basic Controls</h2>
+            <div class="controls-section">
+                <div class="control-grid">
+                    <div class="control-item">
+                        <div class="control-key">W A S D</div>
+                        <div class="control-action">Move around</div>
+                    </div>
+                    
+                    <div class="control-item">
+                        <div class="control-key">Mouse</div>
+                        <div class="control-action">Look around</div>
+                    </div>
+                    
+                    <div class="control-item">
+                        <div class="control-key">Left Click</div>
+                        <div class="control-action">Break blocks</div>
+                    </div>
+                    
+                    <div class="control-item">
+                        <div class="control-key">Right Click</div>
+                        <div class="control-action">Place blocks</div>
+                    </div>
+                    
+                    <div class="control-item">
+                        <div class="control-key">Space</div>
+                        <div class="control-action">Jump</div>
+                    </div>
+                    
+                    <div class="control-item">
+                        <div class="control-key">Shift</div>
+                        <div class="control-action">Sneak</div>
+                    </div>
+                    
+                    <div class="control-item">
+                        <div class="control-key">E</div>
+                        <div class="control-action">Open inventory</div>
+                    </div>
+                    
+                    <div class="control-item">
+                        <div class="control-key">Q</div>
+                        <div class="control-action">Drop items</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modes -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Game Modes</h2>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon">🏗️</div>
+                    <h3 class="guide-title">Creative Mode</h3>
+                    <p class="guide-description">
+                        Unlimited resources for building. Perfect for creating magnificent structures 
+                        without worrying about survival.
+                    </p>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">⚔️</div>
+                    <h3 class="guide-title">Survival Mode</h3>
+                    <p class="guide-description">
+                        Gather resources, build shelter, and survive in a challenging world. 
+                        Manage hunger and health while exploring.
+                    </p>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">🎯</div>
+                    <h3 class="guide-title">PvP Arena</h3>
+                    <p class="guide-description">
+                        Battle other players in epic combat. Use weapons, armor, and tactics 
+                        to become the ultimate champion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essential Tips -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Essential Tips for Beginners</h2>
+            <ul class="tips-list">
+                <li><strong>Start Small:</strong> Begin with simple structures before attempting complex builds. Try building a small house with basic materials like wood and stone. This helps you understand the fundamentals of construction.</li>
+                <li><strong>Learn from Others:</strong> Visit popular servers like "Creative Builders" or "Architecture Hub" to see amazing creations and get inspiration. Study how experienced players use different block combinations.</li>
+                <li><strong>Practice Controls:</strong> Spend time getting comfortable with movement and building mechanics. Practice placing blocks quickly and accurately - this skill is crucial for efficient building.</li>
+                <li><strong>Join Communities:</strong> Connect with other players on Discord and Reddit for tips and help. The Bloxd community is very helpful and often shares building techniques and server recommendations.</li>
+                <li><strong>Experiment:</strong> Try different block types and building techniques to find your style. Don't be afraid to mix materials - sometimes unexpected combinations create the most beautiful results.</li>
+                <li><strong>Be Patient:</strong> Building takes time - don't rush, enjoy the creative process. Some of the best builds take weeks or months to complete.</li>
+                <li><strong>Respect Others:</strong> Be friendly and respectful to other players on the server. Ask permission before building near someone else's creation.</li>
+                <li><strong>Backup Your Work:</strong> Take screenshots of your builds to remember your progress. Many servers have building contests where you can showcase your work.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Ready for More?</h2>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon">🏗️</div>
+                    <h3 class="guide-title">Advanced Building</h3>
+                    <p class="guide-description">
+                        Ready to take your building skills to the next level? Learn advanced techniques 
+                        and architectural principles.
+                    </p>
+                    <a href="/bloxd-building-guide.html" style="color: #4facfe; text-decoration: none; font-weight: 600;">Learn More →</a>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">⚔️</div>
+                    <h3 class="guide-title">PvP Combat</h3>
+                    <p class="guide-description">
+                        Master the art of combat with our comprehensive PvP guide. Learn strategies, 
+                        weapon mastery, and tactical approaches.
+                    </p>
+                    <a href="/bloxd-pvp-guide.html" style="color: #4facfe; text-decoration: none; font-weight: 600;">Learn More →</a>
+                </div>
+                
+                <div class="guide-card">
+                    <div class="guide-icon">🌐</div>
+                    <h3 class="guide-title">Best Servers</h3>
+                    <p class="guide-description">
+                        Discover the most popular servers, game modes, and 
+                        communities to join your next adventure.
+                    </p>
+                    <a href="/bloxd-servers.html" style="color: #4facfe; text-decoration: none; font-weight: 600;">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                                        <a href="/how-to-play-bloxd.html">How to Play</a>
+                        <a href="/bloxd-building-guide.html">Building Guide</a>
+                        <a href="/bloxd-pvp-guide.html">PvP Guide</a>
+                        <a href="/bloxd-servers.html">Servers</a>
+            </div>
+            <p>&copy; 2025 Bloxd.click - Learn, Build, Play!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(15, 15, 35, 0.98)';
+            } else {
+                nav.style.background = 'rgba(15, 15, 35, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html> 
