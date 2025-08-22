@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Security Policy - Bloxd.click</title>
+    <meta name="description" content="Our Content Security Policy ensures a secure gaming experience.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .csp-header {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .csp-section {
+            margin-bottom: 30px;
+        }
+        .csp-section h2 {
+            color: #333;
+            border-bottom: 2px solid #4facfe;
+            padding-bottom: 10px;
+        }
+        .csp-code {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            border-left: 4px solid #4facfe;
+        }
+        .security-note {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="csp-header">
+        <h1>Content Security Policy</h1>
+        <p>Bloxd.click - Secure Gaming Environment</p>
+    </div>
+
+    <div class="csp-section">
+        <h2>🔒 Security Headers</h2>
+        <p>Our website implements comprehensive security headers to protect users:</p>
+        
+        <div class="csp-code">
+            Content-Security-Policy: default-src 'self'; 
+            script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; 
+            style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+            font-src 'self' https://fonts.gstatic.com; 
+            img-src 'self' data: https:; 
+            frame-src 'self' https://bloxd.io; 
+            connect-src 'self' https://www.google-analytics.com;
+        </div>
+    </div>
+
+    <div class="csp-section">
+        <h2>🛡️ iframe Security</h2>
+        <p>Our game iframe includes multiple security measures:</p>
+        
+        <div class="csp-code">
+            &lt;iframe 
+                src="https://bloxd.io/" 
+                sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"&gt;
+            &lt;/iframe&gt;
+        </div>
+        
+        <ul>
+            <li><strong>sandbox:</strong> Restricts iframe permissions</li>
+            <li><strong>loading="lazy":</strong> Improves performance and security</li>
+            <li><strong>referrerpolicy:</strong> Controls referrer information</li>
+        </ul>
+    </div>
+
+    <div class="csp-section">
+        <h2>✅ Trusted Sources</h2>
+        <p>We only embed content from verified, trusted sources:</p>
+        <ul>
+            <li><strong>Google Analytics:</strong> Official Google service for website analytics</li>
+            <li><strong>Google Fonts:</strong> Official Google font service</li>
+            <li><strong>Bloxd.io:</strong> Official game source with security verification</li>
+        </ul>
+    </div>
+
+    <div class="security-note">
+        <strong>Security Note:</strong> This page demonstrates our commitment to security. 
+        All embedded content is from trusted sources and protected by multiple security layers.
+    </div>
+
+    <div class="csp-section">
+        <h2>📱 Browser Compatibility</h2>
+        <p>Our security measures are compatible with all modern browsers:</p>
+        <ul>
+            <li>Chrome 60+</li>
+            <li>Firefox 55+</li>
+            <li>Safari 12+</li>
+            <li>Edge 79+</li>
+        </ul>
+    </div>
+
+    <div class="csp-section">
+        <h2>🔄 Regular Updates</h2>
+        <p>We continuously update our security measures:</p>
+        <ul>
+            <li>Monthly security reviews</li>
+            <li>Regular dependency updates</li>
+            <li>Security header optimization</li>
+            <li>Content source verification</li>
+        </ul>
+    </div>
+
+    <p><a href="/security.html">← Back to Security Page</a></p>
+</body>
+</html> 

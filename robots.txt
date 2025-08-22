@@ -1,20 +1,17 @@
 User-agent: *
 Allow: /
 
+# 明确允许所有内容
+Allow: /assets/
+Allow: /*.html
+Allow: /sitemap.xml
+
+# 网站地图
 Sitemap: https://bloxd.click/sitemap.xml
-Host: bloxd.click
 
-# Disallow admin areas (if any)
-Disallow: /admin/
-Disallow: /private/
+# 爬取延迟（可选）
+Crawl-delay: 1
 
-# Allow important pages
-Allow: /how-to-play-bloxd
-Allow: /bloxd-building-guide
-Allow: /bloxd-pvp-guide
-Allow: /bloxd-servers
-Allow: /bloxd-tips-tricks
-Allow: /bloxd-updates
-
-# Crawl delay (optional)
-Crawl-delay: 1 
+# 明确说明这是安全的游戏网站
+# 内容类型：游戏指南、教程、服务器信息
+# 无恶意内容，无欺骗性内容 

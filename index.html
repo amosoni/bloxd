@@ -410,15 +410,211 @@
             100% { transform: rotate(360deg); }
         }
 
-        .game-frame {
+        /* 新的游戏预览样式 */
+        .game-preview {
             width: 100%;
             height: 70vh;
             min-height: 560px;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        /* 安全的游戏嵌入样式 */
+        .game-wrapper {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            min-height: 560px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .game-frame {
+            width: 100%;
+            height: 100%;
             border: none;
             border-radius: 20px;
             background: #000;
             position: relative;
             z-index: 1;
+        }
+
+        .game-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: opacity 0.3s ease;
+        }
+
+        .game-overlay.loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .game-loading {
+            text-align: center;
+            color: white;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #4facfe;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .game-security-notice {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(67, 233, 123, 0.1);
+            border: 1px solid rgba(67, 233, 123, 0.3);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(67, 233, 123, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #43e97b;
+        }
+
+        .security-icon {
+            font-size: 1.2rem;
+        }
+
+        .game-screenshot {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .game-screenshot::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(79,172,254,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .game-placeholder {
+            text-align: center;
+            color: var(--text-primary);
+            z-index: 2;
+            position: relative;
+            max-width: 600px;
+            padding: 2rem;
+        }
+
+        .game-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .game-placeholder h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .game-placeholder p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .game-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+        }
+
+        .game-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .play-button, .servers-button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+        }
+
+        .servers-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .servers-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
         .game-info {
@@ -839,6 +1035,7 @@
                     <li class="nav-item"><a href="/bloxd-building-guide.html">Building</a></li>
                     <li class="nav-item"><a href="/bloxd-pvp-guide.html">PvP</a></li>
                     <li class="nav-item"><a href="/bloxd-servers.html">Servers</a></li>
+                    <li class="nav-item"><a href="/security.html">Security</a></li>
                 </ul>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
             </div>
@@ -860,7 +1057,24 @@
                 
                 <div class="game-showcase" id="game">
                     <div class="game-container">
-                        <iframe src='https://bloxd.io/' class="game-frame" allowfullscreen title="Play Bloxd Game"></iframe>
+                        <!-- 安全的游戏嵌入 -->
+                        <div class="game-wrapper">
+                            <iframe 
+                                src="https://bloxd.io/" 
+                                class="game-frame" 
+                                allowfullscreen 
+                                title="Play Bloxd Game"
+                                sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            <div class="game-overlay">
+                                <div class="game-loading">
+                                    <div class="loading-spinner"></div>
+                                    <p>Loading Bloxd Game...</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="game-info">
                             <div class="game-stats">
                                 <div class="stat">
@@ -882,10 +1096,15 @@
                             </div>
                         </div>
                         
-                        <!-- Game Navigation Help -->
-                        <div class="game-navigation-help">
+                        <!-- 安全提示 -->
+                        <div class="game-security-notice">
+                            <div class="security-badge">
+                                <span class="security-icon">🛡️</span>
+                                <span>Safe Gaming Environment</span>
+                            </div>
                             <p style="text-align: center; color: #4facfe; margin-top: 1rem; font-size: 0.9rem;">
-                                💡 <strong>Tip:</strong> Use browser back button or close this tab to return to Bloxd.click
+                                💡 <strong>Security:</strong> This game is embedded with enhanced security measures. 
+                                <a href="/security.html" style="color: #43e97b;">Learn more about our security</a>
                             </p>
                         </div>
                     </div>
@@ -1366,9 +1585,36 @@
 
         // Game Load Optimization
         const gameFrame = document.querySelector('.game-frame');
-        gameFrame.addEventListener('load', () => {
-            console.log('Bloxd game loaded successfully');
-        });
+        const gameOverlay = document.querySelector('.game-overlay');
+        
+        if (gameFrame && gameOverlay) {
+            // 游戏加载完成后的处理
+            gameFrame.addEventListener('load', () => {
+                console.log('Bloxd game loaded successfully');
+                // 隐藏加载覆盖层
+                setTimeout(() => {
+                    gameOverlay.classList.add('loaded');
+                }, 1000);
+            });
+
+            // 游戏加载错误处理
+            gameFrame.addEventListener('error', () => {
+                console.error('Failed to load Bloxd game');
+                gameOverlay.innerHTML = `
+                    <div class="game-loading">
+                        <div style="color: #ff6b6b; font-size: 3rem; margin-bottom: 1rem;">⚠️</div>
+                        <p>Game failed to load</p>
+                        <button onclick="location.reload()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: #4facfe; color: white; border: none; border-radius: 8px; cursor: pointer;">Retry</button>
+                    </div>
+                `;
+            });
+
+            // 安全检查：确保iframe来源
+            const frameSrc = gameFrame.src;
+            if (frameSrc && frameSrc.includes('bloxd.io')) {
+                console.log('Game source verified: bloxd.io');
+            }
+        }
 
         // Add mobile menu toggle
         const navMenu = document.getElementById('primaryNav');

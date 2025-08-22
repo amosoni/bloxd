@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Safety - Bloxd.click</title>
+    <meta name="description" content="Learn about our commitment to security, safety, and providing a secure gaming experience for all users.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bloxd.click/security">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-79TMB5GPR1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date());
+      gtag('config', 'G-79TMB5GPR1');
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Security & Safety - Bloxd.click">
+    <meta property="og:description" content="Our commitment to security and providing a safe gaming experience.">
+    <meta property="og:url" content="https://bloxd.click/security">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --dark-bg: #0f0f23;
+            --card-bg: rgba(20, 20, 40, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--dark-bg);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .security-content {
+            padding: 4rem 0;
+        }
+
+        .security-section {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(20px);
+        }
+
+        .security-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #4facfe;
+        }
+
+        .security-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .security-section ul {
+            color: var(--text-secondary);
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .security-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+        }
+
+        .footer {
+            background: var(--card-bg);
+            border-top: 1px solid var(--glass-border);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo">Bloxd.click</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/how-to-play-bloxd.html">How to Play</a></li>
+                <li><a href="/bloxd-servers.html">Servers</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Security & Safety</h1>
+                <p>Your safety and security are our top priorities. Learn about our commitment to providing a secure gaming experience.</p>
+            </div>
+        </section>
+
+        <section class="security-content">
+            <div class="container">
+                <div class="security-section">
+                    <h2>🔒 Content Safety</h2>
+                    <p>We are committed to providing a safe and secure gaming experience for all users. Our website contains only educational content related to the Bloxd game, including:</p>
+                    <ul>
+                        <li>Game tutorials and guides</li>
+                        <li>Server information and recommendations</li>
+                        <li>Building and PvP strategies</li>
+                        <li>Frequently asked questions</li>
+                        <li>Community resources</li>
+                    </ul>
+                    <p><strong>No malicious content, no deceptive practices, no harmful downloads.</strong></p>
+                </div>
+
+                <div class="security-section">
+                    <h2>🛡️ Secure Game Embedding</h2>
+                    <p>We use advanced security measures to safely embed the Bloxd game:</p>
+                    <ul>
+                        <li><strong>Sandbox Protection:</strong> iframe uses sandbox attributes to limit permissions</li>
+                        <li><strong>Content Security:</strong> Restricted access to prevent malicious scripts</li>
+                        <li><strong>Source Verification:</strong> Only trusted game sources are embedded</li>
+                        <li><strong>Loading Protection:</strong> Secure loading with error handling</li>
+                        <li><strong>User Safety:</strong> No access to user's device or personal data</li>
+                    </ul>
+                    <p>The game is embedded from the official bloxd.io source with enhanced security protocols.</p>
+                </div>
+
+                <div class="security-section">
+                    <h2>✅ Verified Content</h2>
+                    <p>All content on our website is:</p>
+                    <ul>
+                        <li>Created and reviewed by our team</li>
+                        <li>Focused on educational gaming content</li>
+                        <li>Free from malicious code or scripts</li>
+                        <li>Regularly updated and maintained</li>
+                        <li>Compliant with web safety standards</li>
+                    </ul>
+                </div>
+
+                <div class="security-section">
+                    <h2>🚫 What We Don't Do</h2>
+                    <p>We want to be completely transparent about what our website does NOT contain:</p>
+                    <ul>
+                        <li>No malware or viruses</li>
+                        <li>No phishing attempts</li>
+                        <li>No deceptive advertising</li>
+                        <li>No unauthorized downloads</li>
+                        <li>No harmful external links</li>
+                        <li>No user data collection beyond basic analytics</li>
+                    </ul>
+                </div>
+
+                <div class="security-section">
+                    <h2>📱 Safe for All Devices</h2>
+                    <p>Our website is safe to visit on:</p>
+                    <ul>
+                        <li>Desktop computers</li>
+                        <li>Laptops</li>
+                        <li>Tablets</li>
+                        <li>Mobile phones</li>
+                        <li>All major browsers (Chrome, Firefox, Safari, Edge)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Learn More?</h2>
+                <p>Explore our safe and educational gaming content</p>
+                <a href="/" class="cta-button">Start Exploring</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Bloxd.click - Safe Gaming Education</p>
+            <p>All content is educational and safe for all ages</p>
+        </div>
+    </footer>
+</body>
+</html> 
