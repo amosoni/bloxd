@@ -1,2 +1,24 @@
-/*  /index.html 200
-https://www.bloxd.click/* https://bloxd.click/:splat 301! 
+# 主要重定向规则
+# 确保所有页面都能被正确索引
+
+# 强制HTTPS重定向
+http://bloxd.click/* https://bloxd.click/:splat 301!
+http://www.bloxd.click/* https://bloxd.click/:splat 301!
+
+# WWW到根域名重定向
+https://www.bloxd.click/* https://bloxd.click/:splat 301!
+
+# 处理尾部斜杠
+/bloxd-building-guide.html/ /bloxd-building-guide.html 301!
+/bloxd-pvp-guide.html/ /bloxd-pvp-guide.html 301!
+/bloxd-servers.html/ /bloxd-servers.html 301!
+/how-to-play-bloxd.html/ /how-to-play-bloxd.html 301!
+/faq.html/ /faq.html 301!
+/security.html/ /security.html 301!
+
+# 旧URL重定向到新URL（如果有的话）
+/old-page /new-page 301!
+
+# 404页面处理
+/404 /404.html 404
+/* /index.html 200 

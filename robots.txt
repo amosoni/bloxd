@@ -14,4 +14,19 @@ Crawl-delay: 1
 
 # 明确说明这是安全的游戏网站
 # 内容类型：游戏指南、教程、服务器信息
-# 无恶意内容，无欺骗性内容 
+# 无恶意内容，无欺骗性内容
+
+# 允许Googlebot访问所有内容
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# 允许Googlebot-Image访问图片
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp 
